@@ -12,7 +12,7 @@ import java.nio.ByteBuffer;
 import javax.imageio.ImageIO;
  
 public class TestClient {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
  
         if (args.length != 1) {
              System.out.println("Usage: java TestClient <hostname>");
@@ -49,16 +49,18 @@ public class TestClient {
 
         Frame frame = new Frame("Remote Image");
 
-        frame.setSize(200, 200);
+        frame.setSize(300, 300);
+        frame.setDefaultCloseOperation();
         frame.setVisible(true);
-
 
         BufferStrategy bs = frame.getBufferStrategy();
         
         while(bs == null){
-            frame.createBufferStrategy(1);
+            frame.createBufferStrategy(2);
             bs = frame.getBufferStrategy();
         }
+
+        Thread.sleep(100);
 
         Graphics g = bs.getDrawGraphics();
 

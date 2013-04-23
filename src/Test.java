@@ -1,5 +1,3 @@
-package biz.bclife.jvnc;
-
 // Import jvnc packages
 import biz.bclife.jvnc.core.Block;
 

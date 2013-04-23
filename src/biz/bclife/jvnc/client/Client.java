@@ -1,6 +1,7 @@
-package biz.bclife.jvnc.server;
+package biz.bclife.jvnc.client;
 
-import biz.bclife.jvnc.core.*;
+import biz.jvnc.core.*;
+
 
 import java.io.*;
 import java.net.*;
@@ -11,4 +12,4 @@ public class Server {
 
 	}// end of constructor
 
-} // end of class Server
+} // end of class Client
